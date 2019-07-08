@@ -146,7 +146,7 @@
     <column id="COL40" populated="true" UUID="6edf71b8-9f96-4743-8cce-ff8fb1bba987" autoIncrement="false" autoIncrementSequenceName="Series_Series Code_seq" defaultValue="" name="Series Code (Indicator Code)" nullable="0" physicalName="Series Code (Indicator Code)" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL41" populated="true" UUID="cc4c01c5-2cb7-4a86-9dcb-0ea7924234a7" autoIncrement="false" autoIncrementSequenceName="FootNote_Year_seq" defaultValue="" name="Year" nullable="0" physicalName="Year" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+    <column id="COL41" populated="true" UUID="cc4c01c5-2cb7-4a86-9dcb-0ea7924234a7" autoIncrement="false" autoIncrementSequenceName="FootNote_Year_seq" defaultValue="" name="Year" nullable="0" physicalName="Year" precision="0" primaryKeySeq="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
      <remarks></remarks>
     </column>
     <column id="COL42" populated="true" UUID="3a916a70-6d0a-4285-aa90-f673d9bbf024" autoIncrement="false" autoIncrementSequenceName="FootNote_DESCRIPTION_seq" defaultValue="" name="DESCRIPTION" nullable="0" physicalName="DESCRIPTION" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -161,27 +161,28 @@
     <index id="IDX43" populated="true" UUID="776efe37-3ac3-498c-8f3b-57da2a88aa15" clustered="false" name="FootNote_pk" physicalName="FootNote_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC44" populated="true" UUID="805a85fc-611d-4dbf-8662-df66d17194a0" ascendingOrDescending="UNSPECIFIED" column-ref="COL39" name="Country Code" physicalName="Country Code" />
      <index-column id="IDC45" populated="true" UUID="7ca18902-2ad4-4044-b827-4286e69c1cb8" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="Series Code (Indicator Code)" physicalName="Series Code (Indicator Code)" />
+     <index-column id="IDC46" populated="true" UUID="deaa4f8f-7041-4959-a990-5a415351bdb2" ascendingOrDescending="UNSPECIFIED" column-ref="COL41" name="Year" physicalName="Year" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL46" populated="true" UUID="7d7cc922-8f32-44c8-868f-6cd41306ad35" deferrability="7" deleteRule="3" fk-table-ref="TAB31" fkCardinality="7" identifying="true" name="Country_Country-Series_fk" physicalName="Country_Country-Series_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP47" populated="true" UUID="54ea492d-71d1-4684-a3c4-4130af3dbbf6" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
+   <relationship id="REL47" populated="true" UUID="7d7cc922-8f32-44c8-868f-6cd41306ad35" deferrability="7" deleteRule="3" fk-table-ref="TAB31" fkCardinality="7" identifying="true" name="Country_Country-Series_fk" physicalName="Country_Country-Series_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP48" populated="true" UUID="54ea492d-71d1-4684-a3c4-4130af3dbbf6" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
    </relationship>
-   <relationship id="REL48" populated="true" UUID="be2905f3-a2ba-4ae3-ac8e-7cda34463d1e" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="Country_Data_fk" physicalName="Country_Data_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP49" populated="true" UUID="7fbeb5d6-5519-406c-9de5-ceb6fe84db0f" fk-column-ref="COL2" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
+   <relationship id="REL49" populated="true" UUID="be2905f3-a2ba-4ae3-ac8e-7cda34463d1e" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="Country_Data_fk" physicalName="Country_Data_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP50" populated="true" UUID="7fbeb5d6-5519-406c-9de5-ceb6fe84db0f" fk-column-ref="COL2" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
    </relationship>
-   <relationship id="REL50" populated="true" UUID="b01d5ea6-f22f-4c0d-8033-8799bd807057" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="true" name="Country_FootNote_fk" physicalName="Country_FootNote_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP51" populated="true" UUID="56739366-a092-4a08-b965-3185b9fdf122" fk-column-ref="COL39" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
+   <relationship id="REL51" populated="true" UUID="b01d5ea6-f22f-4c0d-8033-8799bd807057" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="true" name="Country_FootNote_fk" physicalName="Country_FootNote_fk" pk-table-ref="TAB11" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP52" populated="true" UUID="56739366-a092-4a08-b965-3185b9fdf122" fk-column-ref="COL39" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL12" />
    </relationship>
-   <relationship id="REL52" populated="true" UUID="a29554c2-c4df-44a4-b3a3-863ddd92449d" deferrability="7" deleteRule="3" fk-table-ref="TAB31" fkCardinality="7" identifying="true" name="Series_Country-Series_fk" physicalName="Series_Country-Series_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP53" populated="true" UUID="43dc60c0-4559-4fe2-ac92-ce8ab3e1d4cc" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+   <relationship id="REL53" populated="true" UUID="a29554c2-c4df-44a4-b3a3-863ddd92449d" deferrability="7" deleteRule="3" fk-table-ref="TAB31" fkCardinality="7" identifying="true" name="Series_Country-Series_fk" physicalName="Series_Country-Series_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP54" populated="true" UUID="43dc60c0-4559-4fe2-ac92-ce8ab3e1d4cc" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
    </relationship>
-   <relationship id="REL54" populated="true" UUID="7b806c9c-2ae0-4ca3-a27b-6cfa4320931e" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="Series_Data_fk" physicalName="Series_Data_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP55" populated="true" UUID="ed95cc23-8dd9-45ec-b6e1-b644e6ce1711" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+   <relationship id="REL55" populated="true" UUID="7b806c9c-2ae0-4ca3-a27b-6cfa4320931e" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="Series_Data_fk" physicalName="Series_Data_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP56" populated="true" UUID="ed95cc23-8dd9-45ec-b6e1-b644e6ce1711" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
    </relationship>
-   <relationship id="REL56" populated="true" UUID="e45a0754-b4b9-4fe9-bba5-bb624904cdac" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="true" name="Series_FootNote_fk" physicalName="Series_FootNote_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP57" populated="true" UUID="de184e4b-050c-4033-a0fa-acc2211f0e9a" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+   <relationship id="REL57" populated="true" UUID="e45a0754-b4b9-4fe9-bba5-bb624904cdac" deferrability="7" deleteRule="3" fk-table-ref="TAB38" fkCardinality="7" identifying="true" name="Series_FootNote_fk" physicalName="Series_FootNote_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP58" populated="true" UUID="de184e4b-050c-4033-a0fa-acc2211f0e9a" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
    </relationship>
   </relationships>
  </target-database>
@@ -194,12 +195,12 @@
   <table-pane table-ref="TAB21" x="26" y="233" bgColor="0xeec994" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB31" x="351" y="202" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB38" x="401" y="282" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL46" pkConnection="0.49767441860465117" fkConnection="0.6009174311926605" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL52" pkConnection="0.23622047244094488" fkConnection="0.8591549295774648" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL48" pkConnection="0.2283464566929134" fkConnection="0.20353982300884957" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL54" pkConnection="0.4926829268292683" fkConnection="0.3651877133105802" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL50" pkConnection="0.2204724409448819" fkConnection="0.9385665529010239" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="129"/>
-  <table-link relationship-ref="REL56" pkConnection="0.7165354330708661" fkConnection="0.49411764705882355" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL47" pkConnection="0.49767441860465117" fkConnection="0.6009174311926605" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL53" pkConnection="0.23622047244094488" fkConnection="0.8591549295774648" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL49" pkConnection="0.2283464566929134" fkConnection="0.20353982300884957" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL55" pkConnection="0.4926829268292683" fkConnection="0.3651877133105802" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL51" pkConnection="0.2204724409448819" fkConnection="0.9385665529010239" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="129"/>
+  <table-link relationship-ref="REL57" pkConnection="0.7165354330708661" fkConnection="0.49411764705882355" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
