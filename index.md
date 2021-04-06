@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Openclassrooms | Data Science | Projet 2 
 
 You can use the [editor on GitHub](https://github.com/SmellyArmure/PROJET-2/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
